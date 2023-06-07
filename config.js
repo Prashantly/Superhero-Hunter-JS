@@ -1,4 +1,4 @@
-const PUBLIC_KEY = process.env.PUBLIC_KEY;
-const HASH = process.env.HASH;
+const PUBLIC_KEY = " ";
+const HASH = " ";
 
 export { PUBLIC_KEY, HASH };
