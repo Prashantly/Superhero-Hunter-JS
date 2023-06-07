@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,700;1,400&display=swap");
+
+:root {
+  --font-pro: "Source Sans Pro", sans-serif;
+  --font-pro-1: "Poppins", sans-serif;
+  --primary: rgb(25, 26, 27);
+  --secondary: #ff0000;
+  --tertiary: #950101;
+  --quaternary: lightgrey;
+  --light-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../assets/images/marvel-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#backHomeBtn {
+  position: absolute;
+  left: 10%;
+  top: 30px;
+  background-color: #e7130c; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+#backHomeBtn:hover {
+  background-color: #0374edce; /* Adjust the hover background color as needed */
+}
+
+#backHomeBtn span:nth-child(2) {
+  margin-left: 5px;
+}
+
+/* toast */
+.toast-container .btn-close {
+  font-size: 16px;
+  color: var(--tertiary);
+}
+
+.toast-header img {
+  width: 45px;
+  height: 45px;
+}
+
+.favourites {
+  text-align: center;
+}
+.favourites h2 {
+  font-size: 2rem;
+  font-family: var(--font-pro-1);
+  background-color: var(--secondary);
+  word-spacing: 0.08rem;
+  letter-spacing: 0.008rem;
+  display: inline-block;
+  padding: 0.8rem;
+  border-radius: 7px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+  color: rgb(255, 215, 16);
+}
+
+#favourites-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.favourites-list-item {
+  margin: 25px;
+}
+
+/* CARD styles */
+
+.card {
+  width: 18rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.favorite-button .fa-heart {
+  color: #a4a4a4;
+  transition: color 0.2s;
+  font-size: 30px;
+}
+
+.favorite-button .fa-heart.liked {
+  color: #ff3252;
+  /* animation: rotateOut;
+  animation-duration: 1s; */
+}
+
+/* no favourites found styles */
+.no-fav-item {
+  /* background-color: #ff0000;
+  padding: 5px;
+  border-radius: 5px; */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgb(255, 245, 62);
+}
+
+.moving-text {
+  color: rgb(231, 7, 7);
+  display: inline-block;
+  animation: moveText 10s linear infinite;
+  font-style: italic;
+  max-width: 100%;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(calc(-100% + 100px));
+  }
+
+  100% {
+    transform: translateX(calc(100% - 100px));
+  }
+}

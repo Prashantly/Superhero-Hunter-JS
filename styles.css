@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Sansita+Swashed:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,700;1,400&display=swap");
+
+:root {
+  --font-pro: "Source Sans Pro", sans-serif;
+  --font-pro_one: "Old Standard TT", serif;
+  --primary: rgb(25, 26, 27);
+  --secondary: #ff0000;
+  --tertiary: #950101;
+  --quaternary: lightgrey;
+  --light-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* generic styles */
+button,
+input {
+  font-family: var(--font-pro);
+  font-size: 1.6rem;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* main app styles start here */
+.homepage-header {
+  width: 100%;
+  /* background: var(--primary); */
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  z-index: -1;
+}
+
+/* toast */
+.toast-container .btn-close {
+  font-size: 16px;
+  color: var(--tertiary);
+}
+
+.toast-header img {
+  width: 45px;
+  height: 45px;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-pro_one);
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Sansita Swashed", cursive;
+  color: var(--secondary);
+}
+
+nav .logo {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: #bac1e9;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+nav ul li a:hover {
+  color: var(--secondary);
+}
+
+/* search box styles */
+
+.search-container {
+  position: relative;
+  /* margin-top: -130px; */
+  min-width: 38%;
+}
+
+.app-header-search {
+  width: 100%;
+  position: relative;
+}
+
+.app-header-search input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.app-header-search input[type="text"]:hover {
+  box-shadow: 0px 1px 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--quaternary);
+}
+
+.app-header-search .search-btn {
+  position: absolute;
+  color: var(--quaternary);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+
+/* search-list styles */
+
+.search-list {
+  display: flex; /* or display: block; depending on your layout needs */
+  flex-direction: row; /* if using display: flex; to stack the child elements vertically */
+  justify-content: center; /* aligns the child elements vertically */
+  align-items: center; /* aligns the child elements horizontally */
+  /* background-color: transparent; */
+  flex-wrap: wrap;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card {
+  margin: 20px;
+  width: 18rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+  border-radius: 50%;
+}
+
+.favorite-button .fa-heart {
+  color: #a4a4a4;
+  transition: color 0.2s;
+  font-size: 30px;
+}
+
+.favorite-button .fa-heart.liked {
+  color: #ff3252;
+  /* animation: rotateOut;
+  animation-duration: 1s; */
+}
